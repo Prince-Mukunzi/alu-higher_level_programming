@@ -1,5 +1,12 @@
 #!/usr/bin/python3
-def uppercase(str):
-    print("{}".format("".join(chr(ord(char) - 32) if ord(char) >= 97 and
-                              ord(char) <= 122 else char for char in str)))
-    
+def print_last_digit(number):
+    if not isinstance(number, int):
+        raise TypeError("Input must be an integer")
+
+    last_digit = abs(number) % 10
+    print(last_digit, end="")
+    return last_digit
+print_last_digit(98)
+print_last_digit(0)
+r = print_last_digit(-1024)
+print(r)
